@@ -1,0 +1,83 @@
+/* #max{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#ann{
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    
+    animation-name: dingi;
+    animation-duration: s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes dingi {
+    100%{
+        transform: rotate(360deg),skew();
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        width: 600px;
+    
+        background-color: yellow;
+    }
+
+    
+} */
+
+body{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    height: 200px;
+    width: 200px;
+    border-radius: 30%;
+    background-color: brown;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+div::before{
+    content: "";
+    background-image: conic-gradient(yellow 20deg,transparent 120deg);
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    animation: dingi 1s linear infinite;
+
+}
+
+div::after{
+    content: " ";
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+
+}
+
+@keyframes dingi {
+    100%{transform: rotate(-360deg);
+    
+    
+    }
+
+
+    
+}
